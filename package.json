@@ -1,0 +1,24 @@
+{
+  "name": "vue-webworker",
+  "version": "0.0.1",
+  "description": "DONT USE ME YET",
+  "main": "dist/vue-webworker.js",
+  "scripts": {
+    "build": "rollup -c build/rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pskhodad/vue-webworker.git"
+  },
+  "keywords": [],
+  "author": "prashant <prashant.s.khodade@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pskhodad/vue-webworker/issues"
+  },
+  "homepage": "https://github.com/pskhodad/vue-webworker#readme",
+  "devDependencies": {
+    "rollup": "^0.36.4",
+    "rollup-plugin-buble": "^0.14.0"
+  }
+}
