@@ -1,0 +1,35 @@
+<html>
+    <body>
+
+        <div id="app-ww">
+            <p>{{ message }}</p>
+            <button v-on:click="genRandom">Generate Random Number</button>
+        </div>
+
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script src="vue-webworker.js"></script>
+        <script>
+
+            Vue.use(VueWebWorker);
+
+            var app5 = new Vue({
+                el: '#app-ww',
+                data: {
+                    message: 'Random number should appear here'
+                },
+                methods: {
+                    genRandom: function () {
+                        this.$WebWorker
+                            .call('slowRandomNumber')
+                            .then((val) => {
+                                //console.log(val);
+                                this.message = val;
+                            });
+                    }
+                }
+            })
+
+        </script>
+        
+    </body>
+</html>
